@@ -1,0 +1,39 @@
+img{
+	margin-left: 23%;
+	margin-top: 2%;
+	margin-bottom: 3%;
+}
+form{
+	margin-top: 1%;
+	margin-left: 21%;
+	border: 1px solid rgba(255,255,255,0.9);
+	padding: 2%;
+	width: 750px;
+	background-color: rgba(255,255,255,0.9);
+}
+form label{
+	margin-left: 5%;
+}
+form input{
+	border: none;
+	background-color: rgba(255,255,255,0.9);
+}
+form h2{
+	font-size: 20px;
+	margin-left: 5%;
+}
+.botao input{
+	width: 15%;
+	background-color: #000FFF;
+	color: white;
+	margin-left: 40%;
+	padding: 1%;
+	border: none;
+	border-radius: 5px;
+	-webkit-transition: 0.3s;
+}
+.botao input:hover{
+	background-color: #000AAA;
+	-webkit-transition: 0.3s;
+	color: rgba(255,255,255,0.9);
+}

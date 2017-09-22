@@ -1,0 +1,75 @@
+
+header{
+	background-color: rgba(255,255,255,0.8);
+	padding: 1%;
+	font-size: 20px;
+}
+header a{
+	float: right;
+}
+section{
+	padding: 2%;
+	font-size: 25px;
+}
+a:hover{
+	text-decoration: none;
+}
+fieldset{
+	width: 80%;
+	margin: 0 auto;
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 5px;
+	padding: 1%;
+}
+fieldset ul{
+	text-align: center;
+}
+fieldset ul li{
+	display: inline;
+	list-style-type: none;
+	margin: 2%;
+	padding: 2%;
+}
+fieldset h1{
+	text-align: center;
+	margin-top: 5%;
+	font-size: 25px;
+}
+fieldset form{
+	margin-left: 12%;
+	margin-top: 2%;
+}
+fieldset form input {
+	padding: 5px;
+	margin: 5px;
+	font-size: 20px;
+}
+footer{
+		font-size: 15px;
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		height: 30px;
+		background-color: rgba(255,255,255,0.8);
+	}
+	footer a{
+		text-decoration: none;
+		margin-right: 3%;
+	}
+	footer a:hover{
+		text-decoration: none;
+	}
+	footer a:link{
+	}
+	.link{
+		text-align: center;
+		margin-top: 15%;
+		margin-bottom: 15%;
+	}
+	.link a{
+		padding-right: 5%;
+	}
+	.link a:hover{
+		text-decoration: none;
+	}

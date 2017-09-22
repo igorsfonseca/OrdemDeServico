@@ -1,0 +1,15 @@
+1° passo:
+importar o banco de dados (projetoc.sql)
+
+2º passo:
+Acesso ADM
+Usuário: admin
+Senha: teste
+
+Acesso funcionário
+Usuário: funcionario
+Senha: teste
+
+
+3° passo:
+Não passe pra ninguem kkkkkk zoas
