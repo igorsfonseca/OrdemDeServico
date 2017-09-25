@@ -41,12 +41,16 @@
       margin-bottom: 15%;
     } 
     h2{
-      text-align: center;
       color: black;
       margin-bottom: 5%;
     }
   fieldset form{
     margin-left: 10%;
+  }
+  @media screen and (max-width: 1024px){
+    fieldset{
+      width: 70%;
+    }
   }
   </style>
    <script type="text/javascript">
@@ -69,7 +73,9 @@
 include 'conexao.php';
 $cpf = $_POST['cpf'];
 if(strlen($cpf) != 11){
-  echo "CPF Inválido";
+  echo '<div class="resolver"><fieldset>';
+  echo "<h2>CPF Inválido!</h2>";
+  echo "</fieldset></div>";
   echo "<script>cpfin()</script>";
 }else{
     $cliente = mysqli_query($con, "SELECT * FROM clientes WHERE cpf = '$cpf'") or print mysql_error();
@@ -105,7 +111,7 @@ if(strlen($cpf) != 11){
       }
         ?></select></h2>
         <h2>Valor: R$<input type="number" name="valor" placeholder="0,00" style="padding-left: 1%;"></h2>
-        <h2>Atividades: <br/><textarea name="atividades" cols="60" rows="5"></textarea></h2>
+        <h2>Atividades: <br/><textarea name="atividades" cols="55" rows="5"></textarea></h2>
         <?php
       echo '<div class="botao"><input type="submit" value="Gerar"></div></form>';
      echo ' <a href="cad_os.php">Voltar</a>  </fieldset>';

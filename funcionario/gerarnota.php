@@ -9,7 +9,7 @@
     body{
     background-image: url('img/body.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100% ;
 } 
   fieldset img{
     margin-left: 20%;
@@ -22,6 +22,7 @@
   }
   fieldset input{
     border: 0;
+    font-size: 20px;
   }
   fieldset{
     width: 60%;
@@ -35,10 +36,29 @@
   .sumir{
     display: none;
   }
+  .resolver fieldset{
+      margin-top: 15%;
+      margin-bottom: 15%;
+    } 
+  .resolver fieldset h2{
+    text-align: center;
+  }
+    h2{
+      color: black;
+      margin-bottom: 5%;
+    }
+  fieldset form{
+    margin-left: 10%;
+  }
+  @media screen and (max-width: 1024px){
+    fieldset{
+      width: 80%;
+    }
+  }
   </style>
    <script type="text/javascript">
     function cpfin(){
-      setTimeout("window.location.href='incluir_os.php'",3000);
+      setTimeout("window.location.href='incluir_os.php'",1000);
     }
   </script>
 </head>
@@ -52,18 +72,20 @@
   </header>
 
 <section>
-  <fieldset>
   <?php
 include 'conexao.php';
 $cpf = $_POST['cpf'];
 if(strlen($cpf) != 11){
-  echo "CPF Inválido";
+  echo '<div class="resolver"><fieldset>';
+  echo "<h2>CPF Inválido!</h2>";
+  echo "</fieldset></div>";
   echo "<script>cpfin()</script>";
 }else{
     $cliente = mysqli_query($con, "SELECT * FROM clientes WHERE cpf = '$cpf'") or print mysql_error();
     $serv = mysqli_query($con, "SELECT * FROM servicos")or print mysql_error();
     if($row = mysqli_fetch_array($cliente)){
       echo "
+                        <fieldset>
                         <form method='POST' action='salvarnota.php'>
                         <img src='img/logo.png'><br/><br/>
                         <label>Cliente: </label> <input type='text' name='nome' value='". $row['nome'] ."'  size='50'></br>
@@ -92,18 +114,21 @@ if(strlen($cpf) != 11){
       }
         ?></select></h2>
         <h2>Valor: R$<input type="number" name="valor" placeholder="0,00" style="padding-left: 1%;"></h2>
-        <h2>Atividades: <br/><textarea name="atividades" cols="60" rows="5"></textarea></h2>
+        <h2>Atividades: <br/><textarea name="atividades" cols="55" rows="5"></textarea></h2>
         <?php
       echo '<div class="botao"><input type="submit" value="Gerar"></div></form>';
+     echo ' <a href="incluir_os.php">Voltar</a>  </fieldset>';
     }else{
-      echo "<div class='h'><h2>CPF não encontrado!</h2></div>";
+      echo '<div class="resolver"><fieldset>';
+      echo "<h2>CPF não encontrado!</h2>";
+      echo "</fieldset></div>";
       echo "<script>cpfin()</script>";
+      
     }
 
 }
 ?>
-<a href="incluir_os.php">Voltar</a>
-  </fieldset>
+
 </section>
 </body>
 </html>

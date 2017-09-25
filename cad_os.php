@@ -1,4 +1,4 @@
- <?php header("Content-type: text/html; charset=utf-8"); ?>
+<?php header("Content-type: text/html; charset=utf-8"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,20 +9,53 @@
 		body{
 		background-image: url('img/body.jpg');
 		background-repeat: no-repeat;
-		background-size: 100%;
+		background-size: 100% 100% 100% 100%;
 }	
 		.link{
 			margin-left: 5%;
 		}
+		form{
+			width: 90%;
+		}
+		table{
+			width: 90%;
+		}
 		table tr td{
-
 			font-size: 18px;
+		}
+		.end input{
+			width: 55%;
+		}
+		.cep input{
+			width: 20%;
 		}
 		h2{
 			text-align: center;
+			margin-top: 3%;
 		}
-		fieldset form{
-			margin-left: 10%;
+		table{
+			margin-left: 5%;
+		}
+		.tab{
+			margin-left: 5%;
+		}
+		.tabela input{
+			width: 80%;
+		}
+		@media screen and (max-width: 1024px){
+		fieldset{
+			margin-top: 2%;
+			font-size: 19px;
+		}
+		fieldset ul li{
+			margin-left: 1%;
+		}
+		table tr td{
+			width: 70px;
+		}
+		.tabela input{
+			width: 95%;
+		}
 		}
 	</style>
 </head>
@@ -48,28 +81,27 @@ exit;
       <li><a href="servicos.php">Serviços</a></li>
       <li><a href="os.php">Ordem de Serviço</a></li>
     </ul>
-    <br/>
     <h2>Incluir O.S.</h2>
     <form method="POST" action="gerarnota.php">
        <table class="table table-condensed">
        <tr><td>
-     Cliente: </td><td><input type="text" name="nome" disabled="disabled" size="80px"></td></tr>
+     Cliente: </td><td><input type="text" name="nome" disabled="disabled" ></td></tr>
      <tr><td>
      CPF: </td><td><input type="text" name="cpf" id="cpf" size="12px" required="required" maxlength="11"> <input type="submit" value="P" ><tr><td>
      <tr><td>
-     Endereço: </td><td><input type="text" size="58px" name="nome" disabled="disabled" > 
+     Endereço: </td><td><input type="text" size="40px" name="nome" disabled="disabled" > 
      CEP: <input type="text" name="nome" size="10px" disabled="disabled" size="13px"><tr><td>
      <tr><td>
      Telefone: </td><td><input type="text"  size="12px" name="nome" disabled="disabled" ><tr><td>
      <tr><td>
-     E-mail: </td><td><input type="text" name="nome" size="80px" disabled="disabled"></td></tr>
+     E-mail: </td><td><input type="text" name="nome"  disabled="disabled"></td></tr>
      </table>
      </form>
 	</fieldset>
 </section>
-<?php 
-	include 'footer.php';
- ?>
 </body>
 </html>
+
+
+
 

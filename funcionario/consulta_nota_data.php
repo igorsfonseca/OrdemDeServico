@@ -21,7 +21,7 @@
 		body{
 		background-image: url('img/body.jpg');
 		background-repeat: no-repeat;
-		background-size: 100%;
+		background-size: 100% 100% 100% 100%; 
 }
 	fieldset{
 		height: 400px;
@@ -29,6 +29,23 @@
 	h1{
 		font-size: 30px;
 	}
+	@media screen and (max-width: 1024px){
+		fieldset{
+			margin-top: 2%;
+			font-size: 19px;
+		}
+		fieldset ul li{
+			margin-left: 1%;
+		}
+		table tr td{
+			width: 70px;
+		}
+		.tabela input{
+			width: 90%;
+		}
+		fieldset label{
+			font-size: 18px;
+		}
 	</style>
 </head>
 <body>
@@ -50,8 +67,8 @@
     </ul>
     <h1 style="font-size: 30px;">Consultar O.S.</h1>
    <form method="POST" action="consultar_os.php">
-	<label style="font-size: 23px;">Data Inicial: <input type='text' id='campoData' name='inicial' size='10' required="required" /></<label>
-	<label style="font-size: 23px;">Data Final: <input type='text' id='data' name='final' size='10' required="required" /></<label>
+	<label>Data Inicial: <input type='text' id='campoData' name='inicial' size='10' required="required" /></<label>
+	<label>Data Final: <input type='text' id='data' name='final' size='10' required="required" /></<label>
 
 	<input type="submit" value="Consultar">
 	</label><br><br>

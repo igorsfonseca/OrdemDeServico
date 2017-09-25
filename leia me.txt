@@ -1,7 +1,10 @@
 1° passo:
-importar o banco de dados (projetoc.sql)
+Crie um database chamado "projetoc";
 
 2º passo:
+Importe o banco de dados (projetoc.sql)
+
+3º passo:
 Acesso ADM
 Usuário: admin
 Senha: teste
@@ -9,7 +12,3 @@ Senha: teste
 Acesso funcionário
 Usuário: funcionario
 Senha: teste
-
-
-3° passo:
-Não passe pra ninguem kkkkkk zoas

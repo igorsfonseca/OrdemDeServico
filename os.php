@@ -9,10 +9,25 @@
 		body{
 		background-image: url('img/body.jpg');
 		background-repeat: no-repeat;
-		background-size: 100%;
-}	
+		background-size: 100% 100% 100% 100%;
+		}	
 		.link{
-			margin-left: 5%;
+			margin-left: 4%;
+
+		}
+		@media screen and (max-width: 1024px){
+		fieldset{
+			margin-top: 2%;
+			font-size: 20px;
+		}
+		fieldset ul li{
+			margin-left: 1%;
+		}
+		.link a{
+			font-size: 18px;
+		padding-right: 3%;
+		}
+
 		}
 	</style>
 </head>

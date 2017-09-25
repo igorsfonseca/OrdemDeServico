@@ -15,6 +15,9 @@
 		.link{
 			margin-left: 5%;
 		}
+		.tabela input{
+			width: 95%;
+		}
 		.ttt{
 		display: none;
 		}fieldset label{
@@ -29,6 +32,21 @@
 		fieldset form input {
 		padding: 5px;
 		font-size: 20px;
+		}
+		@media screen and (max-width: 1024px){
+		fieldset{
+			margin-top: 2%;
+			font-size: 20px;
+		}
+		fieldset ul li{
+			margin-left: 1%;
+		}
+		table tr td{
+			width: 70px;
+		}
+		.tabela input{
+			width: 95%;
+		}
 		}
 	</style>
 </head>
@@ -64,9 +82,10 @@ include 'conexao.php';
 		echo "
 		<form method='POST' action='deletar.php'>
 		<label>ID: </label> <input name='id' id='nomeid' type='text'  value='". $row['id'] ."' size='1' ></br>
-		<label>Funcionario: </label><br> <input type='text' name='login' value='". $row['usuario'] ."' size='80' ></br>
-		<label>E-mail: </label><br> <input type='text' name='email' value='". $row['email'] ."'size='80'></br>
-		<label>Senha: &nbsp;</label><br> <input type='password' name='senha' value='". $row['senha'] ."'size='25'></br><br>" ; 
+		<label>Funcionario: </label><br><div class='tabela'> <input type='text' name='login' value='". $row['usuario'] ."'  >
+		<label>E-mail: </label><br> <input type='text' name='email' value='". $row['email'] ."'></div>
+		<label>Senha: &nbsp;</label><br> <input type='password' name='senha' value='". $row['senha'] ."'size='25'></br><br>
+		</div>" ; 
 		echo "<input type='submit' value='Alterar' name='acao[alterar]'>";
 		echo "<input type='submit' value='Excluir' name='acao[excluir]'>";
 		echo "</form>";

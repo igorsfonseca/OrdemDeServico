@@ -11,7 +11,7 @@
 	body{
 		background-image: url('img/body.jpg');
 		background-repeat: no-repeat;
-		background-size: 100%;
+		background-size: 100% 100% 100% 100%;
 }
 	fieldset{
 		font-size: 17px;
@@ -74,6 +74,9 @@
 	.inp:hover {
 		background-color: #00008B;
 		-webkit-transition: 0.3s;
+	}
+	@media screen and (max-width: 1024px){
+		
 	}
 	</style>
 

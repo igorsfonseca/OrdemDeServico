@@ -12,10 +12,27 @@ include 'conexao.php';
 		background-image: url('img/body.jpg');
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
-}
+	}
 	.ttt{
 		display: none;
 	}
+	.tabela input{
+			width: 90%;
+		}
+	@media screen and (max-width: 1024px){
+		fieldset{
+			margin-top: 2%;
+			font-size: 19px;
+		}
+		fieldset ul li{
+			margin-left: 1%;
+		}
+		table tr td{
+			width: 70px;
+		}
+		.tabela input{
+			width: 90%;
+		}
 	</style>
 </head>
 <body>
@@ -44,7 +61,7 @@ include 'conexao.php';
 					  				<div class='form-group'>
 					  				<form method='POST' action='deletar_clientes.php'>
 									<div class='ttt'><label>ID: </label> <input name='id' id='nomeid' type='text'  value='". $row['id'] ."' size='1' ></br></div>
-					  				<input type='text' name='nome' value='". $row['nome'] ."' size='80' ></br>
+					  				<div class='tabela'><input type='text' name='nome' value='". $row['nome'] ."'  ></div>
 					  				<input type='text' name='cpf' id='cpf' value='". $row['cpf'] ."' size='12'></br>
 					  				<input type='text' id='endereco' name='endereco' value='". $row['endereco'] ."'size='58'>
 					  				<input type='text' name='cep' id='cep' value='". $row['cep'] ."'size='12'></br>

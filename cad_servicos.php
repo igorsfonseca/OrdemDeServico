@@ -14,6 +14,9 @@
 		.link{
 			margin-left: 5%;
 		}
+		.tabela input{
+			width: 90%;
+		}
 		.ttt{
 		display: none;
 		}fieldset label{
@@ -26,8 +29,19 @@
 			margin-left: 10%;
 		} 
 		fieldset form input {
-	font-size: 20px;
-}
+		font-size: 20px;
+		}
+		@media screen and (max-width: 1024px){
+		fieldset{
+			margin-top: 2%;
+			font-size: 19px;
+		}
+		fieldset ul li{
+			margin-left: 1%;
+		}
+		table tr td{
+			width: 70px;
+		}
 	</style>
 </head>
 <body>
@@ -56,7 +70,7 @@ exit;
 	 <h2>Incluir Serviço</h2>
 <form action="cadastrando_servicos.php" method="POST">
 <label>Serviço:</label><br>
-<input type="text" name="servico" size="80px" required="required"><br>
+<div class="tabela"><input type="text" name="servico" required="required"></div>
 <label>Preço R$:</label><br>
 <input type="text" name="valor" size="8px" required="required"><br><br>
 <input type="submit" value="Cadastrar">

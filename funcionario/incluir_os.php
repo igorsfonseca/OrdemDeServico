@@ -9,8 +9,22 @@
 		body{
 		background-image: url('img/body.jpg');
 		background-repeat: no-repeat;
-		background-size: 100%;
-}
+		background-size: 100% 100% 100% 100%;
+	}
+	@media screen and (max-width: 1024px){
+		fieldset{
+			margin-top: 2%;
+			font-size: 19px;
+		}
+		fieldset ul li{
+			margin-left: 1%;
+		}
+		table tr td{
+			width: 70px;
+		}
+		.tabela input{
+			width: 90%;
+		}
 	</style>
 </head>
 <body>

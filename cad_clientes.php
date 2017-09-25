@@ -1,4 +1,5 @@
-<?php header("Content-type: text/html; charset=utf-8"); ?>
+
+ <?php header("Content-type: text/html; charset=utf-8"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,14 +10,25 @@
 		body{
 		background-image: url('img/body.jpg');
 		background-repeat: no-repeat;
-		background-size: 100%;
+		background-size: 100% 100% 100% 100%;
 }	
 		.link{
 			margin-left: 5%;
 		}
+		form{
+			width: 90%;
+		}
+		table{
+			width: 90%;
+		}
 		table tr td{
-
 			font-size: 18px;
+		}
+		.end input{
+			width: 55%;
+		}
+		.cep input{
+			width: 20%;
 		}
 		h2{
 			text-align: center;
@@ -27,6 +39,24 @@
 		}
 		.tab{
 			margin-left: 5%;
+		}
+		.tabela input{
+			width: 80%;
+		}
+		@media screen and (max-width: 1024px){
+		fieldset{
+			margin-top: 2%;
+			font-size: 19px;
+		}
+		fieldset ul li{
+			margin-left: 1%;
+		}
+		table tr td{
+			width: 70px;
+		}
+		.tabela input{
+			width: 95%;
+		}
 		}
 	</style>
 </head>
@@ -56,16 +86,16 @@ exit;
     <form action="cadastro_cliente.php" method="POST">
     <table class="table table-condensed">
     <tr><td>
-     Nome: </td><td><input type="text" name="nome" size="80px" required="required"></td></tr>
+     Nome: </td><td><div class="tabela"><input type="text" name="nome"  required="required"></div></td></tr>
      <tr><td>
      CPF: </td><td><input type="number" name="cpf" id="cpf" size="12px" maxlength="11" required="required"></td></tr>
      <tr><td>
-     Endereço: </td><td><input type="text" size="58px" name="endereco" required="required"> 
-     CEP: <input type="text" name="cep" size="10px" size="13px" required="required"></td></tr>
+     Endereço: </td><td><input type="text" size="40px" name="endereco" required="required"> 
+     CEP: <input type="text" name="cep" size="8px" size="13px" required="required"></td></tr>
      <tr><td>
      Telefone: </td><td><input type="text"  size="12px" name="telefone" required="required"></td></tr>
      <tr><td>
-     E-mail: </td><td><input type="text" name="email" size="80px" required="required"></td></tr>
+     E-mail: </td><td><input type="text" name="email" required="required"></td></tr>
      </table>
      <input type="submit" value="Cadastrar" class="tab">
      </form>
@@ -73,6 +103,10 @@ exit;
 </section>
 </body>
 </html>
+
+
+
+
 
 
 

@@ -48,7 +48,6 @@
       margin-bottom: 15%;
     } 
     h2{
-      text-align: center;
       color: black;
       margin-bottom: 5%;
     }

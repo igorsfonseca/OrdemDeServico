@@ -26,10 +26,24 @@
 		fieldset form{
 			margin-left: 10%;
 		} 
+		.tabela input{
+			width: 90%;
+		}
 		fieldset form input {
-	padding: 5px;
-	font-size: 20px;
-}
+		padding: 5px;
+		font-size: 20px;
+		}
+		@media screen and (max-width: 1024px){
+		fieldset{
+			margin-top: 2%;
+			font-size: 19px;
+		}
+		fieldset ul li{
+			margin-left: 1%;
+		}
+		table tr td{
+			width: 70px;
+		}
 	</style>
 </head>
 <body>
@@ -64,7 +78,7 @@ include 'conexao.php';
 					  				echo "
 					  				<form method='POST' action='deletar_servicos.php'>
 									<label>ID: </label> <input name='id' id='nomeid' type='text'  value='". $row['id'] ."' size='1' ></br>
-					  				<label>Serviço: </label><br> <input type='text' name='servico' value='". $row['servico'] ."' size='80' ></br>
+					  				<label>Serviço: </label><br> <div class='tabela'><input type='text' name='servico' value='". $row['servico'] ."' ></div>
 					  				<label>Preço R$: </label><br> <input type='text' name='valor' value='". $row['valor'] ."'size='8'></br><br>
 									
 					  				" ; 

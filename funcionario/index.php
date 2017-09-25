@@ -9,8 +9,22 @@
 		body{
 		background-image: url('img/body.jpg');
 		background-repeat: no-repeat;
-		background-size: 100%;
-}
+		background-size: 100% 100% 100% 100%;
+		}
+		@media screen and (max-width: 1024px){
+		fieldset{
+			margin-top: 2%;
+			font-size: 19px;
+		}
+		fieldset ul li{
+			margin-left: 1%;
+		}
+		table tr td{
+			width: 70px;
+		}
+		.tabela input{
+			width: 90%;
+		}
 	</style>
 </head>
 <body>
@@ -34,7 +48,7 @@
     <form action="cad_cliente.php" method="POST">
 <input type="text" name="nome" size="50px" required="required" placeholder="Nome"><br>
 <input name="cpf" type="text" id="cpf" required="required" size="15px" placeholder="CPF"/><br>
-<input type="text" name="endereco" size="58px" required="required" placeholder="Endereço"><label>CEP:</label><input type="text" id="cep" name="cep" size="12px" required="required" placeholder="CEP"><br>
+<input type="text" name="endereco" size="58px" required="required" placeholder="Endereço"><br><input type="text" id="cep" name="cep" size="12px" required="required" placeholder="CEP"><br>
 <input type="text" name="telefone" id="telefone" size="15px" required="required" placeholder="Telefone"><br>
 <input type="text" name="email" size="40px" required="required" placeholder="E-mail"><br>
 <input type="submit" value="Cadastrar">

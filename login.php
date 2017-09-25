@@ -11,14 +11,15 @@
 	body{
 		background-image: url('img/body.jpg');
 		background-repeat: no-repeat;
-		background-size: 100%;
+		background-size: 100% 100% 100% 100%;
 }
 	fieldset{
-		font-size: 17px;
-		width: 420px;
-		height: 360px;
+		text-align: center;
+		font-size: 25px;
+		width: 80%;
 		margin: 0 auto;
-		margin-top: 12%;
+		margin-top: 20%;
+		padding: 3%;
 		background-color: rgba(255,255,255,0.9);
 		border-radius: 10px;
 		border: 1px solid white;
@@ -100,6 +101,7 @@ function funcionario(){
 	</script>
 </head>
 <body>
+	<fieldset>
 <?php 	
 include('conexao.php');
 
@@ -122,7 +124,7 @@ if($row > 0){
 	session_start();
 	$_SESSION['login'] = $_POST['login'];
 	$_SESSION['senha'] = $_POST['senha'];
-	echo "<p>Autenticanção válida. Aguarde!</p>";
+	echo "<h2>Autenticanção válida. Aguarde!</h2>";
 	echo "<script>funcionario()</script>";
 
 } else{
@@ -134,6 +136,7 @@ if($row > 0){
 
 ?>
 </h1>
+</fieldset>
 <footer>
 	 <a href="http://itecconsultoria.hol.es" target="_black">&copy;2017 Itecconsultoria</a>
 </footer>
